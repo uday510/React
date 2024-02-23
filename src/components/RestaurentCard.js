@@ -26,9 +26,11 @@ const RestaurentCard = (props) => {
 
 export const withPromotedLabel = (RestaurentCard) => {
   return (props) => {
+    const { data } = props;
+    const { header, subHeader } = data.info.aggregatedDiscountInfoV3
     return (
       <div >
-        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">{header + " " + subHeader}</label>
         <RestaurentCard {...props} />
       </div>
     )

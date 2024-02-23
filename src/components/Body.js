@@ -71,12 +71,12 @@ const Body = () => {
               key={restaurant.info.id}
               to={`/restaurents/${restaurant.info.id}`}
             >
-              {
+              {/* {
                 restaurant.info.isPromoted ?
                   <RestaurentCardWithPromotedLabel data={restaurant} /> :
                   <RestaurentCard data={restaurant} />
-              }
-              {/* <RestaurentCardWithPromotedLabel data={restaurant} /> */}
+              } */}
+              <RestaurentCardWithPromotedLabel data={restaurant} />
             </Link>
           )
           )}
