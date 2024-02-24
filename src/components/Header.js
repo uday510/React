@@ -9,7 +9,6 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-
   const { loggedInUser } = useContext(UserContext);
   // console.log(data);
 
@@ -33,8 +32,8 @@ const Header = () => {
       </div>
       <div className="flex items-center ">
         <ul className="flex p-4 m-4">
-          <li className="px-4">{onlineStatus ? "online 🟢" : "offline 🔴"}</li>
-          <li>
+          <li className="px-4">{onlineStatus ? "online ✅" : "offline ❌"}</li>
+          <li className="px-4">
             <Link to="/">Home</Link>
           </li>
           <li className="px-4">
@@ -55,7 +54,7 @@ const Header = () => {
             {btnName}
           </button>
 
-          {/* <li className="px-4">{loggedInUser}</li> */}
+          <li className="px-4 font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>
