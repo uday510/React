@@ -1,10 +1,18 @@
 import { CDN_URL } from '../utils/constants';
+import { addItem } from '../utils/cartSlice';
+import { useDispatch } from 'react-redux';
 
 const ItemList = ({ items, dummy }) => {
 
-  // console.log(dummy);
+  const dispatch = useDispatch();
 
-  // console.log("ItemList -> items", items);
+  const handleAddItem = (item) => {
+    console.log('Add item');
+    // dispatch an action to add item to the cart
+    dispatch(addItem(item));
+  }
+
+
   return <div>
     {items.map(item => {
       return <div key={item.card.info.id} className="p-2 m-2 border-gray 400 border-b-2 text-left flex justify-between">

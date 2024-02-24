@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,7 +11,9 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurentMenu from "./components/RestaurentMenu";
 import User from "./components/User";
+import appStore from "./utils/appStore";
 // import Grocery from "./components/Grocery";
+import Cart from "./components/Cart";
 
 const AppLayout = () => {
 
@@ -25,14 +28,16 @@ const AppLayout = () => {
         setUserName(data.name);
     }, [])
     return (
-        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-            <div className="app">
-                {/* <UserContext.Provider value={{ loggedInUser: "Dummy" }}> */}
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+                <div className="app">
+                    {/* <UserContext.Provider value={{ loggedInUser: "Dummy" }}> */}
                     <Header />
-                {/* </UserContext.Provider> */}
-                <Outlet />
-            </div>
-        </UserContext.Provider>
+                    {/* </UserContext.Provider> */}
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     );
 }
 
@@ -68,6 +73,12 @@ const appRouter = createBrowserRouter([
                     <Suspense fallback={<div>Loading...</div>}>
                         <Grocery />
                     </Suspense>
+                )
+            },
+            {
+                path: "/cart",
+                element: (
+                    <Cart />
                 )
             },
             {
