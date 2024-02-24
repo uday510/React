@@ -1,12 +1,17 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { LOGO_URL } from '../utils/constants';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
+import UserContext from '../utils/UserContext';
 
 const Header = () => {
   let [btnName, setBtnName] = useState("Login");
 
   const onlineStatus = useOnlineStatus();
+
+
+  const { loggedInUser } = useContext(UserContext);
+  // console.log(data);
 
   // if no dependency array is passed, the useEffect hook will run after every render, 
 
@@ -21,7 +26,7 @@ const Header = () => {
   // }, [btnName] );
 
   return (
-    <div className="flex justify-between bg-pink-100 shadow-lg">
+    <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
       <div className="logo-container">
         <img className="w-56" src={LOGO_URL}
           alt="logo" />
@@ -44,7 +49,13 @@ const Header = () => {
           <li className="px-4">
             <Link to="/cart">Cart</Link>
           </li>
-          <button className="login" onClick={() => btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")}>{btnName}</button>
+          <button
+            className="login"
+            onClick={() => btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")}>
+            {btnName}
+          </button>
+
+          {/* <li className="px-4">{loggedInUser}</li> */}
         </ul>
       </div>
     </div>

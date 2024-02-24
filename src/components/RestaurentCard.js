@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const RestaurentCard = (props) => {
   const { data } = props;
+
+  const { loggedInUser } = useContext(UserContext);
 
   const { name, costForTwo, cuisines, avgRating, deliveryTime, cloudinaryImageId } = data.info;
 
@@ -16,6 +20,7 @@ const RestaurentCard = (props) => {
       <h4>{avgRating} stars</h4>
       <h4>{costForTwo}</h4>
       <h4>{deliveryTime} minutes</h4>
+      <h4>{loggedInUser}</h4>
     </div>
   )
 }
@@ -23,11 +28,11 @@ const RestaurentCard = (props) => {
 // Higher Order Component
 // input - RestaurentCard -> RestaurentCard@Promoted
 
-
 export const withPromotedLabel = (RestaurentCard) => {
   return (props) => {
     const { data } = props;
-    const { header, subHeader } = data.info.aggregatedDiscountInfoV3
+    const header = data?.info?.aggregatedDiscountInfoV3?.header;
+    const subHeader = data?.info?.aggregatedDiscountInfoV3?.subHeader;
     return (
       <div >
         <label className="absolute bg-black text-white m-2 p-2 rounded-lg">{header + " " + subHeader}</label>

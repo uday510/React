@@ -18,12 +18,12 @@ class UserClass extends React.Component {
   // why API calls are made here?
   // because this method is called only once after the component is mounted
   async componentDidMount() {
-    console.log(`${this.props.name}  ComponentDidMount called`);
+    // console.log(`${this.props.name}  ComponentDidMount called`);
 
     // API call
     const data = await fetch('https://api.github.com/users/uday510');
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
 
     this.setState({
       userInfo: {
@@ -38,14 +38,14 @@ class UserClass extends React.Component {
   // this method is called when the component is updated, which means when the state or props are changed
   // for example, when we click a button and change the state, this method is called 
   componentDidUpdate() {
-    console.log(`${this.props.name}  ComponentDidUpdate called`);
+    // console.log(`${this.props.name}  ComponentDidUpdate called`);
   }
 
   // this method is called when the component is about to be removed from the DOM
   // for example, when we navigate to another page or when we remove the component from the DOM,
   //  this method is called
   componentWillUnmount() {
-    console.log(`${this.props.name}  ComponentWillUnmount called`);
+    // console.log(`${this.props.name}  ComponentWillUnmount called`);
   }
 
   render() {

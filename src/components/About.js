@@ -1,34 +1,36 @@
 import User from './User';
 import UserClass from './UserClass';
-import { Component } from 'react';
+import { Component, useContext } from 'react';
+import UserContext from '../utils/UserContext';
+import UserContext from '../utils/UserContext';
 
 class About extends Component {
 
     constructor(props) {
         super(props);
 
-        console.log("Parent Constructor called");
+        // console.log("Parent Constructor called");
     }
 
     componentDidMount() {
-        console.log("Parent ComponentDidMount called");
+        // console.log("Parent ComponentDidMount called");
     }
 
     render() {
-        console.log("Parent Render called");
+        // console.log("Parent Render called");
         return (
             <div className="about" style={{ textAlign: "center" }}>
-                <h1>About</h1>
-                <UserClass
-                    name={"User1"}
-                    location={"Rajhmundry"}
-                    contact={"@udayteja.com"}
-                />
-                {/* <UserClass
-                    name={"User2"}
-                    location={"Rajhmundry"}
-                    contact={"@udayteja.com"} */}
-                {/* /> */}
+                <div>
+                    <UserContext.Consumer>
+                        {({ loggedInUser }) => (
+                            <h1 className="text-xl font-bold">{loggedInUser}</h1>
+                        )}
+                    </UserContext.Consumer>
+                    <UserClass
+                        location={"Rajhmundry"}
+                        contact={"@udayteja.com"}
+                    />
+                </div>
             </div>
         );
     }
@@ -44,7 +46,6 @@ class About extends Component {
 // }
 
 export default About;
-
 
 /**
  *!  Life Cycle of a components when 
