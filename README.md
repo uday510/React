@@ -1,6 +1,6 @@
 # React 🚀
 
-# Parcel
+## Parcel
 
 - Dev Build
 - Local Server
@@ -19,7 +19,7 @@
 - HTTPs
 - Tree Shaking - remove unused code
 
-# Redux Tooltik
+## Redux Tooltik
 
 - Install @redux/toolkit and react-redux
 - Build our store
@@ -27,3 +27,4 @@
 - Slice (cartSlice)
 - dispatch(action)
 - Selector
+

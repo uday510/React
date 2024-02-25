@@ -1,6 +1,5 @@
 import { useEffect, useState, useContext } from "react";
 import RestaurentCard, { withPromotedLabel } from "./RestaurentCard";
-import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";

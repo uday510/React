@@ -1,0 +1,17 @@
+{
+  "id": "LvWSTsHIzD2zvJR438393",
+  "command": [
+    "config",
+    "isl.hold-off-refresh-ms",
+    "--noninteractive",
+    "--config",
+    "extensions.blackbox=!"
+  ],
+  "pid": 38393,
+  "download_bytes": 0,
+  "upload_bytes": 0,
+  "start_time": "2024-02-25T09:55:56.691895Z",
+  "end_time": "2024-02-25T09:55:56.695857Z",
+  "exit_code": 1,
+  "progress": []
+}

@@ -6,19 +6,16 @@ import { Provider } from "react-redux";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
-// import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurentMenu from "./components/RestaurentMenu";
-import User from "./components/User";
-import appStore from "./utils/appStore";
-// import Grocery from "./components/Grocery";
-import Cart from "./components/Cart";
 
+import appStore from "./utils/appStore";
+
+import Cart from "./components/Cart";
 const AppLayout = () => {
 
     // authentication
-
     const [userName, setUserName] = useState();
 
     useEffect(() => {

@@ -1,0 +1,17 @@
+{
+  "id": "3BYREfBZ53xqjhFO38778",
+  "command": [
+    "config",
+    "isl.changedFilesDisplayType",
+    "--noninteractive",
+    "--config",
+    "extensions.blackbox=!"
+  ],
+  "pid": 38778,
+  "download_bytes": 0,
+  "upload_bytes": 0,
+  "start_time": "2024-02-25T09:56:07.734460Z",
+  "end_time": "2024-02-25T09:56:07.738886Z",
+  "exit_code": 1,
+  "progress": []
+}

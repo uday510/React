@@ -4,7 +4,7 @@ import { MENU_API } from "./constants"
 /**
  * 
  * @param {*} resId 
- * @returns re
+ * @returns resInfo
  */
 const useRestaurentMenu = (resId) => {
   const [resInfo, setResInfo] = useState(null);

@@ -1,0 +1,14 @@
+{
+  "id": "o1rjUjwE88U0PxDp38358",
+  "command": [
+    "root",
+    "--noninteractive"
+  ],
+  "pid": 38358,
+  "download_bytes": 0,
+  "upload_bytes": 0,
+  "start_time": "2024-02-25T09:55:56.632310Z",
+  "end_time": "2024-02-25T09:55:56.635229Z",
+  "exit_code": 0,
+  "progress": []
+}

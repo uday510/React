@@ -7,6 +7,7 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
+      // mutating the state here
       // mutating the state directly 
       //  because createSlice uses immer under the hood
       state.items.push(action.payload);
@@ -23,6 +24,8 @@ const cartSlice = createSlice({
 export const { addItem, removeItem, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+// here reducer is a function (action) that takes state and action as arguments and returns the new state
 
 // {
 //   actions: {

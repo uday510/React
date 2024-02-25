@@ -14,7 +14,7 @@ const RestaurentCard = (props) => {
     >
       <img className="res-logo"
         src={CDN_URL + cloudinaryImageId}
-      />
+       alt="logo"/>
       <h3 className="font-bold py-4 text-lg">{name}</h3>
       <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating} stars</h4>
@@ -27,7 +27,6 @@ const RestaurentCard = (props) => {
 
 // Higher Order Component
 // input - RestaurentCard -> RestaurentCard@Promoted
-
 export const withPromotedLabel = (RestaurentCard) => {
   return (props) => {
     const { data } = props;

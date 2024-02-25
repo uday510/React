@@ -1,0 +1,17 @@
+{
+  "id": "W7XmeCE6aAMlIoPz38362",
+  "command": [
+    "config",
+    "github.preferred_submit_command",
+    "--noninteractive",
+    "--config",
+    "extensions.blackbox=!"
+  ],
+  "pid": 38362,
+  "download_bytes": 0,
+  "upload_bytes": 0,
+  "start_time": "2024-02-25T09:55:56.640770Z",
+  "end_time": "2024-02-25T09:55:56.646405Z",
+  "exit_code": 1,
+  "progress": []
+}
