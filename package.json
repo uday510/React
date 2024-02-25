@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/uday510/food-order-app#readme",
   "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@testing-library/react": "^14.2.1",
+    "babel-jest": "^29.7.0",
     "buffer": "^6.0.3",
     "parcel": "^2.11.0",
     "postcss": "^8.4.35",
