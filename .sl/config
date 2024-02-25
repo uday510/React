@@ -1,4 +1,0 @@
-%include builtin:git.rc
-
-[paths]
-REMOTE = https://github.com/uday510/React.git
