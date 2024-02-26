@@ -30,6 +30,7 @@ const RestaurentCard = (props) => {
 export const withPromotedLabel = (RestaurentCard) => {
   return (props) => {
     const { data } = props;
+
     const header = data?.info?.aggregatedDiscountInfoV3?.header;
     const subHeader = data?.info?.aggregatedDiscountInfoV3?.subHeader;
     return (
